@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood_background" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/guessbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:onClick="chooseDifficultyClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/guess_button_selector" />
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_easy_button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/change_difficulty_easy_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:src="@drawable/red_ball" />
+
+           <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                android:src="@drawable/easy"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_normal_button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/change_difficulty_normal_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:src="@drawable/orange_ball" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                android:src="@drawable/normal"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_hard_button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/change_difficulty_hard_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:src="@drawable/yellow_ball" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                android:src="@drawable/hard"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_insane_button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/change_difficulty_insane_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:src="@drawable/green_ball" />
+
+           <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                android:src="@drawable/insane"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_custom_button_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/change_difficulty_custom_button"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:src="@drawable/blue_ball" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                android:src="@drawable/custom"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/change_difficulty_wheel_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        
+        android:layout_weight="6"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/change_difficulty_num_colors_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Number of Colors"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_num_colors_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/change_difficulty_lenght_of_code_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Length of Code"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_length_of_code_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/change_difficulty_num_guesses_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Number of Guesses"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/change_difficulty_num_guesses_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

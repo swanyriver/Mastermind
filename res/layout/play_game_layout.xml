@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MasterLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood_background"
+    android:orientation="vertical"
+    tools:context=".PlayGameActivity" >
+
+    <FrameLayout
+        android:id="@+id/colorselectframe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:background="#00000000" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/colorselectordisplay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/uparrowrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:id="@+id/colorwheelrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9" />
+
+                <LinearLayout
+                    android:id="@+id/downarrowrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/colorselectorcontrols"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/backbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00000000"
+                        android:onClick="onGoBackClick"
+                        android:scaleType="centerInside"
+                        android:scaleX=".75"
+                        android:scaleY=".75"
+                        android:src="@drawable/go_back_selector" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/guessbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00000000"
+                        android:onClick="guessButtonClick"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/guess_button_selector" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/shufflebutton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:onClick="shufflebutton"
+                        android:scaleType="centerInside"
+                        android:scaleX=".75"
+                        android:scaleY=".75"
+                        android:src="@drawable/shuffle_button" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessesPane"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6" >
+
+        <LinearLayout
+            android:id="@+id/GuessDisplay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/GuessHints"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LowerPane"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/StatusFrame"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+
+
+            <LinearLayout
+                android:id="@+id/secretcomboview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/combohiderview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/newGameFrame"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/endGameWheel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:visibility="invisible"
+                android:src="@drawable/shuffle_button" />
+
+            <ImageView
+                android:id="@+id/NewGameText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/new_game"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
